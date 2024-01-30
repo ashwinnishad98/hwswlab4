@@ -30,12 +30,12 @@ globalMinDistance = 9999;
 void dataAggregation(float newDistance) {
   // Update maximum distance
   if (newDistance > globalMaxDistance) {
-    maxDistance = newDistance;
+    globalMaxDistance = globalMaxDistance;
   }
 
   // Update minimum distance
   if (newDistance < globalMinDistance) {
-    minDistance = newDistance;
+    globalMinDistance = newDistance;
   }
 
   Serial.print("Max Distance: ");
