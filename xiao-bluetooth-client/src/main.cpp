@@ -10,9 +10,9 @@
 // TODO: change the service UUID to the one you are using on the server side.
 
 // The remote service we wish to connect to.
-static BLEUUID serviceUUID("8552e3be-a094-43ca-80be-6e21c69d7874");
+static BLEUUID serviceUUID("5ca34f0c-6765-4cc3-9ee5-ad60cf75b82f");
 // The characteristic of the remote service we are interested in.
-static BLEUUID    charUUID("f0cee6f7-dd4a-4146-8efb-2bdb450fec95");
+static BLEUUID    charUUID("c56fbead-87ce-46b0-ae42-820e4170fc53");
 
 static boolean doConnect = false;
 static boolean connected = false;
