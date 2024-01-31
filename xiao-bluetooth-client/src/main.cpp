@@ -21,21 +21,21 @@ static BLERemoteCharacteristic* pRemoteCharacteristic;
 static BLEAdvertisedDevice* myDevice;
 
 // TODO: define new global variables for data collection
-globalCurrentDistance = 0.0;
-globalMaxDistance = -9999.00;
-globalMinDistance = 9999;
+float globalCurrentDistance = 0.0;
+float globalMaxDistance = 0.0;
+float globalMinDistance = -9999;
 
 
 // TODO: define a new function for data aggregation
 void dataAggregation(float newDistance) {
   // Update maximum distance
   if (newDistance > globalMaxDistance) {
-    maxDistance = newDistance;
+    globalMaxDistance = newDistance;
   }
 
   // Update minimum distance
   if (newDistance < globalMinDistance) {
-    minDistance = newDistance;
+    globalMinDistance = newDistance;
   }
 
   Serial.print("Max Distance: ");
@@ -52,7 +52,7 @@ static void notifyCallback(
     // TODO: add codes to handle the data received from the server, and call the data aggregation function to process the data
     static_assert(sizeof(float) == 4, "float is not 4 bytes");
     float distance = *(float*)pData;
-    Serial.print("Distance: ");
+    Serial.print("Current Distance: ");
     Serial.println(distance);
     globalCurrentDistance = newDistance;
 
