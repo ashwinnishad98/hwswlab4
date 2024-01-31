@@ -64,7 +64,7 @@ void setup()
         readings[i] = 0;
     }
 
-    BLEDevice::init("ASH_ESP32");
+    BLEDevice::init("ASHWIN_ESP32");
     pServer = BLEDevice::createServer();
     pServer->setCallbacks(new MyServerCallbacks());
     BLEService *pService = pServer->createService(SERVICE_UUID);
